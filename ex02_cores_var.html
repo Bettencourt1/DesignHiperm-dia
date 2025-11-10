@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 2 — Cores</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    :root {
+      --cor-primaria: #007bff;
+      --cor-secundaria: #6c757d;
+      --cor-sucesso: #28a745;
+      --cor-perigo: #dc3545;
+      --cor-aviso: #ffc107;
+      --cor-info: #17a2b8;
+    }
+    .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; color: #fff; font-weight: bold; margin: 5px; }
+    .btn-primary { background-color: var(--cor-primaria); }
+    .btn-secondary { background-color: var(--cor-secundaria); }
+    .btn-success { background-color: var(--cor-sucesso); }
+    .btn-danger { background-color: var(--cor-perigo); }
+    .btn-warning { background-color: var(--cor-aviso); color: #000; }
+    .btn-info { background-color: var(--cor-info); }
+    .btn:hover { opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>2. Cores (CSS var())</h1>
+    <p>Usando variáveis CSS para definir paleta de cores reutilizável</p>
+    
+    <button class="btn btn-primary">Primário</button>
+    <button class="btn btn-secondary">Secundário</button>
+    <button class="btn btn-success">Sucesso</button>
+    <button class="btn btn-danger">Perigo</button>
+    <button class="btn btn-warning">Aviso</button>
+    <button class="btn btn-info">Info</button>
+
+    <div style="margin-top: 30px;">
+      <h3>Exemplo:</h3>
+      <pre><code>:root {
+  --cor-primaria: #007bff;
+  --cor-secundaria: #6c757d;
+}
+.btn-primary {
+  background-color: var(--cor-primaria);
+}</code></pre>
+    </div>
+  </div>
+</body>
+</html>

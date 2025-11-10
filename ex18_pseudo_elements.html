@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 18 — Pseudo-elements</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .quoted{position:relative;font-style:italic;margin:16px 0}
+    .quoted::before{content:'"';position:absolute;left:-12px;font-size:2em;color:light-dark(#42a5f5,#1e88e5)}
+    .quoted::after{content:'"';font-size:2em;color:light-dark(#42a5f5,#1e88e5)}
+    .icon-with-bullet::before{content:'◆ ';color:light-dark(#f57c00,#ff6f00);font-weight:bold}
+    .highlight{background:light-dark(#fff59d,#f57f17);padding:2px 4px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Pseudo-elements</h1>
+    <p>::before, ::after para decoração sem HTML extra.</p>
+    <p class="quoted">A pureza do CSS sem divs desnecessárias</p>
+    <p class="icon-with-bullet">Item com ícone automático</p>
+    <p>Também <span class="highlight">highlight com ::first-line</span> e outros.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 17 — Advanced Grid</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+    .grid-fr{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:16px 0}
+    .item{background:light-dark(#e3f2fd,#1a237e);padding:12px;border-radius:4px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Advanced Grid</h1>
+    <p>Grid com auto-fit, auto-fill, fr units, minmax().</p>
+    <h3>auto-fit (responsive)</h3>
+    <div class="grid-auto">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+    <h3>2fr 1fr 1fr (proportional)</h3>
+    <div class="grid-fr">
+      <div class="item">Wide</div>
+      <div class="item">Narrow</div>
+      <div class="item">Narrow</div>
+    </div>
+  </div>
+</body>
+</html>

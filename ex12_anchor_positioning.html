@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 12 — Anchor Positioning</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .anchor-demo{position:relative;display:inline-block;background:rgba(0,0,0,0.03);padding:12px;border-radius:6px}
+    .anchor-tooltip{position:absolute;top:100%;margin-top:8px;background:var(--primary);color:#fff;padding:6px;border-radius:4px;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Anchor Positioning</h1>
+    <p>Exemplo de posicionamento de tooltip com fallback.</p>
+    <div class="anchor-demo">
+      Hover aqui
+      <div class="anchor-tooltip">Dica</div>
+    </div>
+  </div>
+</body>
+</html>

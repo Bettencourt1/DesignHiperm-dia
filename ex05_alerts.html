@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 5 — Alerts</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .alert {
+      display: flex;
+      gap: 12px;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 15px 0;
+      border-left: 4px solid;
+    }
+    .alert svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    .alert-primary {
+      background-color: light-dark(#d1ecf1, #1a3a3f);
+      border-color: #0c5460;
+      color: #0c5460;
+    }
+    .alert-success {
+      background-color: light-dark(#d4edda, #1a3f2a);
+      border-color: #155724;
+      color: #155724;
+    }
+    .alert-warning {
+      background-color: light-dark(#fff3cd, #3f3a1a);
+      border-color: #856404;
+      color: #856404;
+    }
+    .alert-danger {
+      background-color: light-dark(#f8d7da, #3f1a1a);
+      border-color: #721c24;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="info-fill" viewBox="0 0 16 16">
+      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </symbol>
+    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.061L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+    </symbol>
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0l-5.708 9.935A1.13 1.13 0 0 0 1.306 13h12.388a1.13 1.13 0 0 0 1.013-1.499L8.982 1.566ZM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5Z"/>
+    </symbol>
+    <symbol id="exclamation-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4Zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
+    </symbol>
+  </svg>
+
+  <div class="wrap">
+    <h1>5. Alerts</h1>
+    <p>Componentes de alerta com ícones SVG</p>
+
+    <div class="alert alert-primary" role="alert">
+      <svg role="img" aria-label="Informação:"><use xlink:href="#info-fill"/></svg>
+      <div>Um exemplo de alerta informativo com um ícone</div>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+      <svg role="img" aria-label="Sucesso:"><use xlink:href="#check-circle-fill"/></svg>
+      <div>Operação realizada com sucesso!</div>
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+      <svg role="img" aria-label="Aviso:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+      <div>Atenção! Verifique os dados antes de continuar.</div>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+      <svg role="img" aria-label="Erro:"><use xlink:href="#exclamation-circle-fill"/></svg>
+      <div>Erro ao processar sua solicitação. Tente novamente.</div>
+    </div>
+  </div>
+</body>
+</html>

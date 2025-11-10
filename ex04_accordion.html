@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 4 — Accordion</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    details {
+      background-color: light-dark(#f9f9f9, #2d2d2d);
+      border: 1px solid light-dark(#ddd, #444);
+      border-radius: 4px;
+      margin: 10px 0;
+      padding: 0;
+    }
+    summary {
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      user-select: none;
+    }
+    details[open] summary {
+      background-color: light-dark(#e8e8e8, #3d3d3d);
+    }
+    summary:hover {
+      background-color: light-dark(#f0f0f0, #353535);
+    }
+    details > * {
+      padding: 0 15px;
+    }
+    details > summary {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>4. Accordion</h1>
+    <p>Usando &lt;details&gt; e &lt;summary&gt; para criar accordions</p>
+
+    <details>
+      <summary>Pergunta 1: O que é HTML?</summary>
+      <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Fornece a estrutura e conteúdo das páginas.</p>
+    </details>
+
+    <details>
+      <summary>Pergunta 2: O que é CSS?</summary>
+      <p>CSS (Cascading Style Sheets) é usado para estilizar e fazer o layout de páginas web — por exemplo, para alterar a fonte, cor, tamanho e espaçamento do seu conteúdo.</p>
+    </details>
+
+    <details>
+      <summary>Pergunta 3: O que é JavaScript?</summary>
+      <p>JavaScript é uma linguagem de programação que permite implementar funcionalidades complexas em páginas web. Sempre que uma página faz mais do que simplesmente mostrar informações estáticas, atualiza conteúdo em tempo real, ou controla mídia multimídia.</p>
+    </details>
+
+    <details>
+      <summary>Pergunta 4: Como funcionam os &lt;details&gt;?</summary>
+      <p>O elemento &lt;details&gt; cria um widget de divulgação no qual as informações são visíveis apenas quando o widget é alternado para um estado "aberto". O elemento &lt;summary&gt; fornece uma legenda ou título que pode ser clicado para alternar o estado aberto/fechado.</p>
+    </details>
+  </div>
+</body>
+</html>

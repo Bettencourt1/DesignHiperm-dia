@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>20 Exercícios — Caderno de Estilos</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .exercise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:24px 0}
+    .exercise-card{background:light-dark(#fff,#1e1e1e);border:1px solid light-dark(#ddd,#333);border-radius:8px;padding:16px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+    .exercise-card:hover{transform:translateY(-4px);box-shadow:0 4px 12px light-dark(rgba(0,0,0,.15),rgba(0,0,0,.5))}
+    .ex-num{display:inline-block;background:light-dark(#007bff,#0056b3);color:#fff;width:40px;height:40px;border-radius:50%;text-align:center;line-height:40px;font-weight:bold;margin-bottom:8px}
+    .ex-title{font-weight:bold;margin-bottom:4px}
+    .ex-desc{font-size:.9rem;color:light-dark(#666,#aaa)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>20 Exercícios — Caderno de Estilos v3</h1>
+    <p>Componentes práticos para o projeto InfoAlunos, conforme ficha do professor Marco Miguel Olival Olim</p>
+    
+    <div class="exercise-grid">
+      <a href="ex01_tema_light_dark.html" class="exercise-card">
+        <div class="ex-num">1</div>
+        <div class="ex-title">Alternar tema</div>
+        <div class="ex-desc">CSS light-dark()</div>
+      </a>
+      <a href="ex02_cores_var.html" class="exercise-card">
+        <div class="ex-num">2</div>
+        <div class="ex-title">Cores</div>
+        <div class="ex-desc">CSS var() variáveis</div>
+      </a>
+      <a href="ex03_tipografia.html" class="exercise-card">
+        <div class="ex-num">3</div>
+        <div class="ex-title">Tipografia</div>
+        <div class="ex-desc">h1–h6 e p</div>
+      </a>
+      <a href="ex04_accordion.html" class="exercise-card">
+        <div class="ex-num">4</div>
+        <div class="ex-title">Accordion</div>
+        <div class="ex-desc">&lt;details&gt; &lt;summary&gt;</div>
+      </a>
+      <a href="ex05_alerts.html" class="exercise-card">
+        <div class="ex-num">5</div>
+        <div class="ex-title">Alerts</div>
+        <div class="ex-desc">SVG ícones</div>
+      </a>
+      <a href="ex06_badge.html" class="exercise-card">
+        <div class="ex-num">6</div>
+        <div class="ex-title">Badge</div>
+        <div class="ex-desc">Anchor positioning</div>
+      </a>
+      <a href="ex07_breadcrumb.html" class="exercise-card">
+        <div class="ex-num">7</div>
+        <div class="ex-title">Breadcrumb</div>
+        <div class="ex-desc">&lt;ol&gt; &lt;li&gt;</div>
+      </a>
+      <a href="ex08_buttons.html" class="exercise-card">
+        <div class="ex-num">8</div>
+        <div class="ex-title">Buttons</div>
+        <div class="ex-desc">8 variações cores</div>
+      </a>
+      <a href="ex09_card.html" class="exercise-card">
+        <div class="ex-num">9</div>
+        <div class="ex-title">Card</div>
+        <div class="ex-desc">Container query</div>
+      </a>
+      <a href="ex10_dropdown.html" class="exercise-card">
+        <div class="ex-num">10</div>
+        <div class="ex-title">Dropdown</div>
+        <div class="ex-desc">Popover + anchor</div>
+      </a>
+      <a href="ex11_forms.html" class="exercise-card">
+        <div class="ex-num">11</div>
+        <div class="ex-title">Formulários</div>
+        <div class="ex-desc">&lt;form&gt; &lt;input&gt;</div>
+      </a>
+      <a href="ex12_lists.html" class="exercise-card">
+        <div class="ex-num">12</div>
+        <div class="ex-title">Listas</div>
+        <div class="ex-desc">&lt;ul&gt; agrupadas</div>
+      </a>
+      <a href="ex13_modal.html" class="exercise-card">
+        <div class="ex-num">13</div>
+        <div class="ex-title">Modal</div>
+        <div class="ex-desc">&lt;dialog&gt; backdrop</div>
+      </a>
+      <a href="ex14_navbar.html" class="exercise-card">
+        <div class="ex-num">14</div>
+        <div class="ex-title">Navbar</div>
+        <div class="ex-desc">&lt;nav&gt; responsiva</div>
+      </a>
+      <a href="ex15_tabs.html" class="exercise-card">
+        <div class="ex-num">15</div>
+        <div class="ex-title">Navs &amp; Tabs</div>
+        <div class="ex-desc">grid subgrid :is()</div>
+      </a>
+      <a href="ex16_pagination.html" class="exercise-card">
+        <div class="ex-num">16</div>
+        <div class="ex-title">Pagination</div>
+        <div class="ex-desc">&lt;nav&gt; paginação</div>
+      </a>
+      <a href="ex17_progress.html" class="exercise-card">
+        <div class="ex-num">17</div>
+        <div class="ex-title">Progress</div>
+        <div class="ex-desc">&lt;progress&gt; bar</div>
+      </a>
+      <a href="ex18_spinners.html" class="exercise-card">
+        <div class="ex-num">18</div>
+        <div class="ex-title">Spinners</div>
+        <div class="ex-desc">@keyframes</div>
+      </a>
+      <a href="ex19_tables.html" class="exercise-card">
+        <div class="ex-num">19</div>
+        <div class="ex-title">Tabelas</div>
+        <div class="ex-desc">&lt;table&gt;</div>
+      </a>
+      <a href="ex20_tooltip.html" class="exercise-card">
+        <div class="ex-num">20</div>
+        <div class="ex-title">Tooltip</div>
+        <div class="ex-desc">Popover + anchor</div>
+      </a>
+    </div>
+
+    <div style="margin-top:40px;background:light-dark(#f5f5f5,#2d2d2d);padding:20px;border-radius:4px">
+      <h2>Instruções:</h2>
+      <ul>
+        <li>Clique em cada exercício para ver o componente</li>
+        <li>Todos com <strong>CSS puro</strong>, sem frameworks</li>
+        <li>Variáveis CSS para tema light/dark</li>
+        <li>Responsivos e acessíveis (WCAG 2.1)</li>
+        <li>Código fonte em cada página</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:20px;background:light-dark(#d1ecf1,#1a3a3f);padding:15px;border-radius:4px;border-left:4px solid #0c5460">
+      <h3>Nota:</h3>
+      <p>Caderno de estilos do projeto <strong>InfoAlunos</strong> — sistema de apoio estudantil para Universidade da Madeira.</p>
+      <p><strong>Prazo:</strong> GitHub até 04 Janeiro 2026, 23h59 | <strong>Apresentação:</strong> 05 Janeiro 2026</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 6 — Badge</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      anchor-name: --inbox-button;
+    }
+    .btn:hover { background-color: #0056b3; }
+    .badge {
+      position: absolute;
+      top: anchor(--inbox-button top);
+      left: anchor(--inbox-button right);
+      translate: -50% -50%;
+      background-color: #dc3545;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>6. Badge (Anchor Positioning)</h1>
+    <p>Badge posicionado usando Anchor Positioning CSS</p>
+
+    <button type="button" class="btn">
+      Inbox
+      <span class="badge">
+        99+ <span class="visually-hidden">mensagens não lidas</span>
+      </span>
+    </button>
+
+    <div style="margin-top: 30px; background: light-dark(#f5f5f5, #2d2d2d); padding: 20px; border-radius: 4px;">
+      <h3>Como funciona:</h3>
+      <p>O botão define <code>anchor-name: --inbox-button</code></p>
+      <p>O badge usa <code>position: absolute</code> com referências ao anchor via <code>anchor()</code></p>
+      <pre><code>.btn {
+  anchor-name: --inbox-button;
+}
+.badge {
+  position: absolute;
+  top: anchor(--inbox-button top);
+  left: anchor(--inbox-button right);
+  translate: -50% -50%;
+}</code></pre>
+    </div>
+  </div>
+</body>
+</html>

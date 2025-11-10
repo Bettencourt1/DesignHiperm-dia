@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 15 — :has()</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .card-list{list-style:none;padding:0;margin:0}
+    .card-list li{padding:12px;margin:8px 0;background:light-dark(#f9f9f9,#2a2a2a);border-radius:4px}
+    .card-list li:has(input:checked){background:light-dark(#e8f5e9,#1b3a1b);border-left:4px solid #4caf50}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>:has() Selector</h1>
+    <p>Selector :has() permite estilizar pai conforme filho (ex.: li com input checked).</p>
+    <ul class="card-list">
+      <li><label><input type="checkbox"> Tarefa 1</label></li>
+      <li><label><input type="checkbox"> Tarefa 2</label></li>
+      <li><label><input type="checkbox" checked> Tarefa 3 (completed)</label></li>
+    </ul>
+  </div>
+</body>
+</html>

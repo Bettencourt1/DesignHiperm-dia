@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 9 — Card (Container Query)</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    .card-container {
+      container-type: inline-size;
+      width: 100%;
+    }
+    .card {
+      background-color: light-dark(#fff, #2d2d2d);
+      border: 1px solid light-dark(#ddd, #444);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px light-dark(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    }
+    .card-title {
+      margin: 0 0 10px 0;
+      font-size: 1.25rem;
+    }
+    .card-text {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    @container (min-width: 300px) {
+      .card { padding: 25px; }
+      .card-title { font-size: 1.5rem; }
+    }
+    @container (min-width: 500px) {
+      .card {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 20px;
+        padding: 30px;
+      }
+      .card-img { width: 100px; height: 100px; background: #42a5f5; border-radius: 4px; }
+    }
+    @container (min-width: 700px) {
+      .card {
+        grid-template-columns: 150px 1fr;
+        gap: 30px;
+      }
+      .card-img { width: 150px; height: 150px; }
+      .card-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>9. Card (Container Query)</h1>
+    <p>Card que adapta layout conforme o tamanho do container, não da viewport</p>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-img"></div>
+        <div>
+          <h2 class="card-title">Título do Card</h2>
+          <p class="card-text">Este card usa container queries para adaptar seu layout conforme a largura disponível no container, não na janela do navegador.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; background: light-dark(#f5f5f5, #2d2d2d); padding: 20px; border-radius: 4px;">
+      <h3>Como funciona:</h3>
+      <pre><code>.card-container {
+  container-type: inline-size;
+}
+@container (min-width: 500px) {
+  .card { display: grid; grid-template-columns: 100px 1fr; }
+}
+@container (min-width: 700px) {
+  .card { grid-template-columns: 150px 1fr; }
+}</code></pre>
+    </div>
+  </div>
+</body>
+</html>

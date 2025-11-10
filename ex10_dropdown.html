@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercício 10 — Dropdown</title>
+  <link rel="stylesheet" href="..\css\styles.css">
+  <style>
+    #anchor {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      anchor-name: --toggle;
+    }
+    #anchor:hover { background-color: #0056b3; }
+    #target {
+      margin: 0;
+      list-style: none;
+      padding: 8px 0;
+      background: light-dark(#fff, #2d2d2d);
+      border: 1px solid light-dark(#ddd, #444);
+      border-radius: 4px;
+      box-shadow: 0 2px 8px light-dark(rgba(0,0,0,0.15), rgba(0,0,0,0.3));
+    }
+    #target[popover] {
+      position: absolute;
+      position-anchor: --toggle;
+      position-area: bottom;
+      position-try-fallbacks: top;
+      width: anchor-size(width);
+    }
+    #target li {
+      margin: 0;
+    }
+    #target li a {
+      display: block;
+      padding: 10px 15px;
+      color: light-dark(#000, #fff);
+      text-decoration: none;
+    }
+    #target li a:hover {
+      background-color: light-dark(#f0f0f0, #3d3d3d);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>10. Dropdown (Popover)</h1>
+    <p>Menu dropdown usando Popover e Anchor Positioning</p>
+
+    <nav style="margin: 30px 0;">
+      <button id="anchor" popoveraction="toggle" popovertarget="target">
+        Abrir Menu ▾
+      </button>
+      <ul id="target" popover>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top: 40px; background: light-dark(#f5f5f5, #2d2d2d); padding: 20px; border-radius: 4px;">
+      <h3>Como funciona:</h3>
+      <pre><code>&lt;button id="anchor" popoveraction="toggle" popovertarget="target"&gt;
+  Abrir Menu ▾
+&lt;/button&gt;
+&lt;ul id="target" popover&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;style&gt;
+#anchor { anchor-name: --toggle; }
+#target[popover] {
+  position: absolute;
+  position-anchor: --toggle;
+  position-area: bottom;
+  width: anchor-size(width);
+}
+&lt;/style&gt;</code></pre>
+    </div>
+  </div>
+</body>
+</html>
